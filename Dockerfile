@@ -10,11 +10,11 @@ RUN apk --no-cache upgrade && apk add --no-cache apache2
 RUN mkdir -p /run/apache2
 
 # Copy an original application
-COPY ./* /var/www/html/
+COPY . /var/www/html/
 
 # Open port for httpd access
 EXPOSE 80
 
 # Run httpd in foreground so that the container does not quit
 # soon after start
-CMD ["/usr/sbin/httpd", "-D","FOREGROUND"]
+CMD  ["/usr/sbin/httpd", "-D", "FOREGROUND"]
