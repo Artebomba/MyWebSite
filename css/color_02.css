@@ -1,0 +1,160 @@
+/* -------------------- Цветовая схема - 02 -------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Marmelad|Ubuntu');
+
+
+
+/* main colors */
+/* #4abdac */
+/* #F4F1BB */
+/* #FFFD82 */
+/* #ED6A5A */
+
+
+body{
+	font-family: 'Marmelad',serif;
+	background: #4abdac;
+	color: white;
+	background-image: url(../images/patterns/green.png);
+}
+h1,.navbar a{
+	font-family: "Ubuntu",sans-serif;
+	text-transform: uppercase;
+}
+.navbar a{
+	color:white;
+}
+table *{
+	font-size: 18px;
+}
+.table tr{
+	color: #114B5F!important;
+}
+.table>tbody>tr>td{
+	border-top-color: rgba(255,253,130,0.4);
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color: rgba(255,253,130,0.2);
+}
+.table-hover>tbody>tr:hover{
+	background-color: rgba(255,253,130,0.2);
+}
+h1{ /* Шрифт заголовков */
+	padding: 20px 0px 10px 0px;
+	color: #FFFD82;
+}
+.navbar,.navbar li.active,.navbar li.active a,.navbar li a:hover,.navbar li:hover {
+	background-color: #4abdac;;
+	color:#FFFD82;
+}
+#header{
+	background: #4abdac;
+}
+#header h2,#header h3,#header a{
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+}
+#header h1{
+	font-size: 32px;
+}
+.navbar a:hover:after,.navbar li.active a:after {
+    display: block;
+    position:relative;
+    top:0px;
+    width:100%;
+    height:0;
+    text-align:center;
+    content : "\25B2";
+    color:#FFFD82;
+}
+.navbar-fixed-top a:hover:after,.navbar-fixed-top li.active a:after {
+    display: block;
+    position:relative;
+    top:2px;
+    width:100%;
+    height:0;
+    text-align:center;
+    content : "\25BC";
+    color:#FFFD82;
+}
+.nav-justified>li>a{
+	color: white;
+}
+.navbar{
+	border:0;
+	padding-left: 0;
+	padding-right: 0;
+	border-bottom: 3px solid  #FFFD82;
+	border-radius: 0;
+}
+.navbar-fixed-top{
+	background: #4abdac;
+	border-radius: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+@media (min-width: 568px) {
+  .navbar .container {
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .container {
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar .container {
+    width: auto;
+  }
+}
+.container-fluid{
+	padding-right: 0;
+	padding-left: 0;
+}
+#maintext p,#maintext p,#maintext ul,#maintext ol,#maintext li,#maintext h1,#maintext h2,#maintext h3,#maintext strong,#maintext em,#maintext a{
+	background-color: white;
+	color:#114B5F;
+	font-family: 'Marmelad',serif;
+}
+#maintext, #maintext.article{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#langbox{
+	margin-right: 40px;
+}
+.comment, .comment strong{
+	background-color: #ED6A5A!important;
+	color:white!important;
+}
+#scrollToTop{
+	color:rgba(255,253,130,0.8);
+}
+
+.footer{
+	background-color: #114B5F;
+	color:white;	
+}
+
+.navbar-default .navbar-toggle{
+	background-color:  #FFFD82;
+	border-color: #FFFD82;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #4abdac;
+}
+.navbar-default .navbar-toggle:hover{
+	background-color:  #4abdac;
+	border-color: #FFFD82;
+}
+.navbar-default .navbar-toggle:hover .icon-bar{
+	background-color: #FFFD82;
+}
+
+
+
+

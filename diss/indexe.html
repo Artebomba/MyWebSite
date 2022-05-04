@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  	<meta charset="utf-8">
+		<meta name="robots" content="noindex,nofollow">
+	  	<title>Abstract - Pasterskiy Artem - Development of a breadboard model of a communication line with  research of technology G.SHDSL</title>
+	  	<link rel="stylesheet" href="../js/bootstrap/css/bootstrap.min.css">
+			<link rel="stylesheet" href="../css/color_03.css">
+		<link rel="stylesheet" type="text/css" href="../css/master_style.css">
+		<link rel="stylesheet" type="text/css" href="../css/magnific-popup.css">
+		<link rel="icon" type="image/png" href="../images/cap.png">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div id="header" class="container-fluid">
+				<div class="row">
+					<div id="langbox" class="hidden-xs">
+						<a href="indexu.html"><img src="../images/ua.png" title="Українська" alt="Українська" width="24" height="20" ></a> &nbsp;
+						<a href="index.html"><img src="../images/ru.png" title="Русский" alt="Русский" width="24" height="20"></a>
+					</div>
+					<div id="photomag" class="col-md-3 col-sm-4">
+						<a class="img-photo" href="../photo.jpg">
+							<img src="../photo.jpg"  width=180 height=240 title="Ivan Ivanenko" alt="Ivan Ivanenko">
+						</a>
+					</div>
+					<div id="headertext" class="col-md-9 col-sm-8">
+						<h1>Pasterskiy Artem</h1>
+						<h3><a href="http://fkitaer.donntu.edu.ua/">Faculty of computer-integrated technology, automation, electrical engineering and radio electronics</a></h3>
+						<h3>Department	of automation and telecommunications</h3>
+						<h3>Speciality &laquo;Telecommunications and Radio Engineering&raquo;</h3>
+						<h2>Development of a breadboard model of a communication line with  research of technology G.SHDSL</h2>
+						<h3>Scientific adviser: Victoria Voropayeva</h3>
+					</div>
+				</div>
+			</div>
+			<nav class="navbar navbar-default">
+				<div class="container">
+				    <div class="navbar-header">
+				    	<a class="hidden-sm hidden-md hidden-lg" href="indexu.html"><img src="../images/ua.png" title="Українська" alt="Українська" width="24" height="20" ></a> &nbsp;
+						<a class="hidden-sm hidden-md hidden-lg" href="index.html"><img src="../images/ru.png" title="Русский" alt="Русский" width="24" height="20"></a>
+				    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+					    	<span class="sr-only">Menu</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+				      	</button>
+				    </div>
+				    <div class="collapse navbar-collapse" id="menu">
+				      	<ul class="nav nav-justified">
+					        <li><a href="../indexe.html">Resume</a></li>
+							<li class="active"><a>Abstract</a></li>
+				        </ul>
+				    </div>
+				</div>
+			</nav>
+			<a href="#" id="scrollToTop"><span>▲</span></a>
+			<div id="middleblock" class="container">
+				<div id="maintext" class="article">
+					<h1>Report on the topic of final work</h1>
+					<h2>Table of contents</h2>
+					<ol class="content">
+						<li class=skip><!-- Класс skip для ненумерованных элементов -->
+							<a href="#p0">Introduction</a>
+						</li>
+						<li>
+							<!-- Заголовок раздела 1 -->
+							<a href="#p1">Raising of task on planning</a>
+							<!-- Список подразделов 1.1-1.3 -->
+							<ol>
+								<li><a href="#p11">Ground of development of stand</a></li>
+								<li><a href="#p12">Problems of the last mile</a></li>
+							</ol>
+						</li>
+						<li>
+							<!-- Заголовок раздела 2 -->
+							<a href="#p2">Characteristics of subscriber networks</a>
+							<!-- Список подразделов 2.1-2.4 -->
+							<ol>
+								<li><a href="#p21">Passive components of "ТфОП"</a></li>
+                                <li><a href="#p22">Requirements to the lines connections and trading posts, influencing on quality of lines</a></li>
+							</ol>
+						</li>
+
+						<li class=skip>
+							<a href="#p3">Conclusions</a>
+						</li>
+
+						<li class=skip>
+							<a href="#ref">List of sources</a>
+						</li>
+
+					</ol>
+					<a id=p0></a>
+					<h2>Introduction</h2>
+					<p>
+						The increase of streams of information, transferrable on a network the Internet by companies and private users, and also requirement, in organization of remote access to the corporate networks, generated a requirement in creation of inexpensive technologies of digital Kilostream service on the narrowest place of digital network - subscriber telephone line. There are a few variants of decision of this problem.
+                        However almost every variant envisages the construction of fundamentally new CPN, such as a radio network or network on the basis of оптоволоконных communication channels. Technologies of DSL(Digital Subscriber Line) allow considerably to rev up communication of data on the existent copper pairs of telephone wires without the necessity of modernisation of subscriber telephone lines. Exactly possibility of transformation of existent telephone lines in HSDLS and is main advantage of technologies of DSL.
+					</p>
+					        <p>
+						Due to the indicated advantages, and also technologies of DSL got development the high unitization of apparatus, reliability of exploitation, automation of all stages of connection, and widely inculcated in practice.
+					</p>
+						<p>
+						The rate of data depends only on quality and length lines, connecting an user and provider. Creation of universal methodology for determination of fitness of line to the use of technologies of DSL is an essential step on the way of building of new modern high-speed networks of subscriber access.
+					</p>
+                                                <p>
+                                                There is a main question at introduction of technology of DSL - what state a subscriber line is in. It will be reasonable to suppose that it is physically impossible to conduct measuring of lines, therefore the task of making of layout of long line becomes actual, that will design the damages of different kind without the necessity of presence of the real flow line.
+                                        </p>
+                                                <p>
+                                                A layout presents the set of elements of variable resistance, capacity, cables, modems and measuring devices. Technical descriptions of cable will be measured on the device of RB - 6000DSL.
+                                        </p>
+                                                <p>
+                                                A device is intended for measuring of parameters of cable lines by a direct current, and also for a distance-finding to the site of damage of isolation or place of precipice of tendons of cable.
+                                        </p>
+                                                <p>
+                                                The aim of diploma project consists in development of chart of substitution for a stand on research of descriptions of lines of telephone networks of the general use.
+                                        </p>
+
+					<a id=p1></a>
+					<h2>1. Raising of task on planning</h2>
+
+					<a id=p11></a>
+					<h3>1.1 Ground of development of stand</h3>
+
+					<p>
+						A large value communication networks are played by linear building of connection. Quality and amount of services that an operator can offer eventual спожилачеви depend exactly on quality of the laid cables. In the cable systems of LECS, having plenty of the subscribers concentrated on a small area, and using ЛС for work with such широкополосными technologies, as ISDN and хDSL, produce very hard requirements to descriptions of cables.The basic method of determination of quality and character of damage of cable busses is measuring of their electric descriptions.
+					</p>
+						<p>
+							Electric descriptions of the unfolded cable and cable convolute in a bay differ substantially, there is obvious inconvenience for testing, related to measuring of descriptions : at all presence of similar experience for this purpose it is necessary really to have bays of cable of proper-length.
+						</p>
+						<p>
+							At the same time, in radiotechnical practice for measuring of parameters of equipment a not environment, and equivalents of environment of transmission of signals(equivalents of aerials, equivalents of long lines etc.), is used since olden times, standardized and generally accepted.
+                                        </p>
+						<p>
+                                                       For example, instead of coaxial cable an artificial long line, consisting of condensers and spools of inductance, equivalent to operating of linear capacity and linear inductance of cable on this length, is used.
+                                        </p>
+						<p>     Creation of layout of electric cable bus will allow to conduct measuring of descriptions and design of different types of damages without the necessity of the real flow line, allows to get practical skills to the future specialists and maximally to approach the terms of their work to the real.
+					</p>
+					<p>
+
+                                        <a id=p12></a>		
+					<h3>1.2 Problems of the last mile</h3>
+						<p>
+						A concept "The last mile"(Last Mile ") behaves to the small area of telephone network - only to the subscriber line that is envisaged after a certain subscriber(by an user). The problem" of the last mile "consists in the choice of method of organization of the subscriber connecting(access) to the network of telecommunications and choice of equipment.</p>
+                                                <p>
+                                                A sign(+) is show certain advantage of method before other, by a sign(-) - this method loses as compared to other. Coming from a table, the most optimal variant is technology of xDSL.</p>
+                                                <p>
+                                                <center>
+                                                <div class="img">
+							<img src="images/cloud-know2.png" width=700 alt="Три способа решения проблемы последней мили">
+                                                        
+							<p class="imgcaption">Pic.1 Three methods of decision of problem of the "last mile""</p>
+                                                </div>
+                                                </center>
+                                                <p>
+                                                Dependence of parameters of transmission of pairs of cable on length. Resistance and working capacity of pair in direct ratio depend on length of cable. Resistance of isolation depends on length of pair of cable in inverse ratio. Fading depends in direct ratio on length of pair of cable. The module and phase of impendance do not depend on length of pair of cable.Speed of information transfer subscriber lines depends on the values of electric parameters of cables, connecting muffs, cross-country race equipment, distributive closets, boxes and boxes, telephone EXCHANGES, equipment of xDSL and others like that.</p>
+                                                <p>
+                                                In practice we have many factors that negatively influence on the rate of data.</p>		
+					
+					<h2>2. Descriptions of CPNS</h2>
+					<a id=p21></a>
+					<h3>2.1 Passive components of ТфОП</h3>
+                                        <p> 
+                                        <b>     Types of cables and their parameters</b><br>
+                                        <p>     In the internalss of interconnector of connection on the area of telephone EXCHANGES - a subscriber is mostly used multipair cable of brand of ТППэп(ГОСТ of Р 51311-99) with the amount of the twisted pairs from 10 to 600 Cables of ТППэп intended for exploitation in municipal LECS with nominal variable tension to 225 in and 145 in with frequency 50 Hertzs or by permanent tension to 315 in and 200 in accordingly. The gasket of cable of ТППэп is executed in collectors, mines, tunnels, telephone sewage system, on the walls of building, on a pendant on the air-tracks of connection.
+A construction of cable of ТППэп is a set of the twisted pairs in an isolation. A current-carrying tendon of cable of ТППэп is a copper soft wire Ø 0,32; 0,40; 0,50; 0,64; 0,70 or 0,90 мм. Isolation of tendons is a polyethylene(ПЭ). The insulated conductors sharply different in color are twisted up in a pair. All pairs in an elementary bunch have the individual colouring. Mandrel of cable consists of elementary 5 or 10-ти pair bunches(in cables with the number of pairs to 100 inclusive) or from main bunches(in cables with the number of pairs more than 100).
+A clamping puttee of bunches and mandrel is a synthetic filament or ribbon of individual color for every bunch. A half-length isolation is the synthetic ribbon(ПВХ, PETP, ПЭТ-Э or ПЭ) imposed longitudinally or helically. A screen is the алюмополиетиленовая ribbon imposed longitudinally or helically. Under a screen the copper is longitudinally laid the tin-plated wire Ø 0,4 or 0,5 мм. Shell is a polyethylene light-stabilized.</p>
+                                        <p>
+                                        <b>     Cross-country race connections</b><br>
+                                        <p>     A cross-country race equipment is intended for connection of pair мидножильних cables at application in composition subscriber cross-country races, distributive boxing and closets. Basis is made by плинты on 5, 8 and 10 pairs with normally-close and broken a secret contacts, complex securing for one pair and 10-ти pair shop of defence. An additional equipment is presented different размикачамы, by пылезащитными hubcaps, control and measuring cords, assembling collars and other .The silvered contacts of type of IDC provide reliable connection of copper tendons a diameter from 0,4 to 0,8 мм.</p>
+                                       
+                                        <a id=p22></a>
+					<h3>2.2 Requirements to the lines connections and trading posts, influencing on quality of lines</h3>
+
+					<p>     An existent cable telephone network now is not an ideal base for development of the high-speed systems of transmission. Ability of the twisted pairs of copper wires to pass information depends on the physical parameters of these wires, in particular, from crossing, and length of telephone line. What less section of wires and than longer line, the the more fading suffers an electric signal is passed on this line.In order that the balanced subscriber telephone lines were an acceptable highway of transmission of signals, they must answer certain terms. Length of subscriber telephone lines must not exceed a certain limit, that allows to answer the requirements of fading. A line must have an even impedance on all length.For prevention of penetration in the line of hindrances from outsourcing, and also appearance of noises and cross hindrances, a line must have corresponding symmetry between wires, and also between wires and earth. Physical and electric parameters of copper telephone lines, and also those terms in that these lines are laid and must be exploited generate certain problems during realization of new digital technologies.</p>
+                                        <p>
+                                                At the transmission of signal on миднiй of telephone line he carries fading twisted. Fading of signal increases with the increase of distance and increase of his frequency. Thus the maximally possible fading of transferrable signal determines maximal length of line, used. Harmonious distortions appear in case of limitation of signal or his nonlinear changes.Signals with different frequencies are passed on a telephone line with different speed, therefore there are the distortions related to the phase delay. All of it can influence on Kilostream service.In case that the characteristic impedance of subscriber line is uneven on all her length(that can be investigation of entangling of tendons of wires, uses of segments of cable with the wires of different section and different cable damages), the reflection of transferrable signal(so-called losses on a reflection) can be present. Losses on a reflection in area of audio-frequency can be measured and adjusted. Signals are reflected influence on the difficult charts of modulation.In addition, while there is not an equipment able to define a source it is reflected in a subscriber distributive cable on frequencies about 300 кГц and higher. Symmetry of line, falls short of to the requirements, can result in appearance not only of distortions, but also noises and cross hindrances and aiming. Thus this problem increases at the increase of frequency. Telephone lines are exposed to noises and hindrances of a few kinds, namely: white noise, cross hindrances on a fellow creature and distant end of line, radio frequency hindrances and impulsive noises.</p>
+
+                                        <p>     White noise becomes a problem on a subscriber telephone line, when to her connected heterogeneous electronic equipment, for example, coders-decoders, multiplexers etc. Technical parameters of such equipment must be such, to support a relation signal-noise in possible limits.</p>
+                                        <p>     Cross hindrances appear on the near end of line, when signals transferrable on one pair of wires are driven to the nearby pair. This problem becomes important at high speed communication of data, and especially in that case, when on plenty of subscriber lines within the limits of one cable Kilostream service is organized. Cross hindrances arise up on the distant end of line, when a signal on the distant end of line influences on the near end of line.Influence of cross hindrances on широкомасштабное introduction of the systems of DSL depends on quality of cable, amount of the pairs, used and frequency range a signal is passed in that.</p>
+                                        <p>     Impulsive hindrances bring in different electromagnetic devices, for example, of line of жиллення, transformers, circuit breakers etc. What longer line, the anymore she is subject to influence of hindrances. While introductions of the high-speed systems of transmission on subscriber telephone lines are not very widespread, the scales of this problem it is difficult to estimate.With the height of number of subscribers, using the systems of Kilostream service on the telephone lines, for the achievement of necessary quality level of work of these systems the special measuring and large preparatory work can be required.</p>
+   
+					<a id=p3></a>
+					<h2>Conclusions</h3>
+
+					<p>
+                                            The decision of development of laboratory stand was reasonable, the basic methods of decision of problems of the "last mile" were considered. Advantages and lacks of every method were considered as compared to other. On the basis of these comparisons was drawn conclusion that the most optimal variant of decision of problem of the "last mile" is technology of xDSL.Descriptions of technologies of wire access were briefly considered, speeds on that they work, when were standardized, it is technologies of group LAN, technology of networks of multipleaccess of xDSL technology(symmetric and asymmetric). Descriptions and equalizations of basic xDSL technologies were taken in a table. As a result of comparison we have, that technology of G most befits for a diploma project.SHDSL, because she befits for organization of digital communication channels between telephone EXCHANGES, base stations and comptroller in cellular networks, for organization of channels of department and technological networks, for organization from " connections of remote offices in corporate networks. Also because she has the assured rate of data, low level of errors and small time of delay of encoding of proactive ERCC.
+</p>
+
+                                        <p>
+                                            The different types of construction of CPNS were considered: closet and without closet, descriptions of passive components of networks, such as a cable, cross-country race, muff and т. of Д., Were considered parameters that influence on quality of communication of data on a cable. At passing of technological practice the practical measuring of existent physical flow lines were got and the analysis of these data is conducted. It is set that resistance of line straight depends on distance.So, knowing resistance, it is possible exactly enough to calculate distance between a subscriber and telephone EXCHANGES. Knowing reference data of хDSL modem, it is possible to estimate what speed a modem will unite on. Unfortunately that is all. to know the secondary parameters of line a difficult expensive equipment is required.</p>
+							
+					<p>
+					    At writing of this report final work is not yet completed. Final completion: May, 2018. Complete text of work and materials on the topic can be got for an author or his leader after the named date.
+					</p>
+
+					<a id=ref></a>
+					<h2>List of sources</h2>
+					<ol>
+						<li>Соколов Н.А. Мережі абонентського доступа.- М .: 1999. - 154 с.</li>
+						<li>Характеристика G.SHDSL. [Електронний ресурс] – Режим доступу до ресурсу: <a href="www.stream.ru">www.stream.ru</a>.</li>
+						<li>В. Горальскі. Технологією ADSL та DSL. М .: 1997. - 296 с.</li>
+						<li>Что такое xDSL ситемы? [Електронний ресурс] – Режим доступу до ресурсу: <a href="www.xdsl.ru">www.xdsl.ru</a>.</li>
+						<li>Оліфер В.Г., Оліфер Н.А Комп'ютерні мережі. Принципи, технології, протоколи .. - СПб .: Питер, 2001</li>
+						<li>Бріскер А.С., Восс М.А. Експлуатація лінійних споруд міських телефонних сетей.- М .: Радио и связь, 1981. - 247 с.</li>
+						<li>Архитектура ЭВМ [Електронний ресурс] – Режим доступу до ресурсу: <a href="https://sites.google.com/site/architectevm/#TOC--68">https://sites.google.com/site/architectevm/#TOC--68</a>.</li>
+						<li>Бріскер А.С. - Міські телефонні кабелі Довідник, 1984</li>
+						<li>АТС-телеком [Електронний ресурс] – Режим доступу до ресурсу: <a href="www.ats-telecom.ru">www.ats-telecom.ru</a></li>
+						<li>Облачные технологии [Електронний ресурс] // РБК.Research – Режим доступу до ресурсу: <a href="http://marketing.rbc.ru/reviews/it-business/chapter_6_2.shtml">http://marketing.rbc.ru/reviews/it-business/chapter_6_2.shtml</a>.</li>
+						<li>Менжиков Ч. Облака. Почему облачное хранилище это удобно? [Електронний ресурс] / Чингис Менжиков // In mind. – 2015. – Режим доступу до ресурсу: <a hre="http://in-mind.ru/news/29/93/">http://in-mind.ru/news/29/93/</a>.</li>
+						<li>Облачное хранилище данных [Електронний ресурс] // Smart Технологии – Режим доступу до ресурсу: <a href="http://www.leonsky.net/smart-технологии/облачное-хранилище- данных/">http://www.leonsky.net/smart-технологии/облачное-хранилище- данных/</a>.</li>
+						<li>Методы сжатия данных. Устройство архиваторов, сжатие изображений и видео / Д.Ватолин, А. Ратушняк, М. Смрнов, В. Юкин., 2003. – 384 с.</li>
+						<li>Проектирование и создание центров обработки данных (ЦОД) [Електронний ресурс] // TEV. – 2015. – Режим доступу до ресурсу: <a href="http://www.tev.ru/service_and_support/datacenter/">http://www.tev.ru/service_and_support/datacenter/</a>.</li>
+						<li>Оснащение центров обработки данных. Проектирование ЦОД. [Електронний ресурс] // Комфортзон. – 2015. – Режим доступу до ресурсу: <a href="http://www.comfortzone.ru/examples/data_centres/">http://www.comfortzone.ru/examples/data_centres/</a>.</li>
+						<li>Соцопрос: Насколько Вы используете возможности Вашего смартфона? [Электронный ресурс]. – Режим доступа: <a href="https://goo.gl/SF9nVa">https://goo.gl/SF9nVa</a></li>
+						<li>С. С. Баранова Исследования тенденций развития облачных сервисов // Cloud of science . 2014. №3 С.517-523.</li>
+						<li>Монахов Д. Н., Монахов Н. В.Облачные Технологии. Теория и практика/МАКС Пресс Москва, МГУ,2013–128c.</li>
+						<li>Максименко В.Н. Центр обработки данных в структуре автоматизированной системы управления качеством оператора сотовой связи / Максименко В.Н. // Вестник российской академии естественных наук . Серия экономическая — 2009. — №2. — С. 50—56.</li>
+						<li>Рынок Облачных Сервисов в Украине. Изменения за год [Электронный ресурс]. – Режим доступа: <a href="http://www.slideshare.net/De_Novo/01-2015-50128603">http://www.slideshare.net/De_Novo/01-2015-50128603</a>.</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="text-center"><a href="http://donntu.edu.ua" >Донецкий национальный технический университет</a>, 2017</div>
+		</div>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script src="../js/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../js/script.min.js"></script>
+	</body>
+</html>

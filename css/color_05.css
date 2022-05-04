@@ -1,0 +1,202 @@
+/* -------------------- Цветовая схема - 05 -------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Pangolin|Roboto:300,400,500,700');
+
+
+
+/* main colors */
+/* #77c9d4 */
+/* #57bc90 */
+/* #015249 */
+/* #a5a5af */
+
+
+body{
+	font-family: 'Roboto',sans-serif;
+	background: #a5a5af;
+	background-image: url('../images/patterns/blue.png');
+	color: #015249;
+}
+
+body>.container-fluid>div{
+	background: #fff;
+}
+table *{
+	font-size: 18px;
+}
+.table tr{
+	color: #015249!important;
+}
+.table>tbody>tr>td{
+	border-top-color: rgba(119,201,212,0.2);
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color: rgba(119,201,212,0.1);
+}
+.table-hover>tbody>tr:hover{
+	background-color: rgba(119,201,212,0.1);
+}
+
+p, ul, ol, li, h1, h2, h3, strong, em, a{
+	color:#015249;
+	font-family: 'Roboto', sans-serif;
+}
+h1,.navbar a{
+	font-family: 'Pangolin', sans-serif;
+}
+h1{
+	font-size: 30px;
+	margin-top: 20px;
+}
+h2{
+	font-size: 22px;
+}
+h3{
+	font-size: 20px;
+}
+h1,h2,h3{
+	color:#015249;
+	font-family: 'Pangolin', sans-serif;
+	
+}
+
+#header{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 30px;
+	background: rgba(255,255,255,0.7);
+}
+#header h2,#header h3,#header a{
+	font-weight: normal;
+	font-family: 'Open Sans', sans-serif;
+	color:#57bc90;
+}
+#header h2{
+	color: #015249;
+	font-family: 'Pangolin', sans-serif;
+}
+#header h1{
+	font-size: 48px;
+	color: #015249;
+	padding: 5px 0px 5px 0px;
+	margin: 5px 0px 5px 0px;
+}
+body>.container-fluid {
+	padding-right: 0;
+	padding-left: 0;
+}
+#menu li{
+	padding:15px 20px;
+}
+#menu a{
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+
+	border-radius: 5px;
+	background: #57bc90;
+	color: #fff;
+	box-shadow: 0 6px #015249;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	border: none;	
+}
+#menu a:active,#menu li.active a{
+	box-shadow: 0 0 #015249;
+	top: 6px;
+}
+#menu a:hover{
+	box-shadow: 0 4px #015249;
+	top: 2px;
+}
+.navbar li,.navbar li.active{
+	background:#fff;
+}
+.navbar{
+	border:0;
+	background: #fff;
+	border-radius: 0;
+}
+.navbar-fixed-top{
+	margin-left: 0;
+	margin-right: 0;
+}
+.navbar-fixed-top #menu a{
+	top:0px;
+	border-radius: 5px;
+	background: #fff;
+	color: #57bc90;
+	box-shadow: none;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.navbar-fixed-top #menu a:active, .navbar-fixed-top #menu li.active a, .navbar-fixed-top #menu a:hover{
+	background: #57bc90;
+	color: #fff;
+	top:0px;
+}
+.navbar-fixed-top #menu li{
+	padding:0px 5px;
+}
+@media only screen and (min-width : 320px) and (max-width : 768px){
+	body{
+		padding-top: 50px;
+	}
+	#header{
+		padding-top: 20px;
+	}
+}
+
+
+.footer,.footer a{
+	background-color: #77c9d4;
+	color:#015249;	
+}
+#langbox{
+	margin-right: 40px;
+}
+
+#maintext{
+	z-index: -3;
+}
+
+.comment, .comment strong{
+	background-color: #77c9d4!important;
+	color:white!important;
+}
+
+#maintext, #maintext.article{
+	background-color: #fff;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#middleblock{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#scrollToTop{
+	background: transparent;
+	color:rgba(77,178,134,0.8);
+}
+
+
+
+.navbar-default .navbar-toggle{
+	background-color:  #57bc90;
+	border-color: #57bc90;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #fff;
+}
+.navbar-default .navbar-toggle:hover{
+	background-color:  #77c9d4;
+	border-color: #77c9d4;
+}
+.navbar-default .navbar-toggle:hover .icon-bar{
+	background-color: #fff;
+}

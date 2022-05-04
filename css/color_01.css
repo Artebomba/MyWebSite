@@ -1,0 +1,139 @@
+/* -------------------- Цветовая схема - 01 -------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Forum|Neucha');
+
+/* main colors */
+/* #49274A */
+/* #94618E */
+/* #f4decb */
+/* #f8eee7 */
+
+body{
+	background-image: url(../images/patterns/purple.png);
+}
+
+#maintext p,#maintext a,a,h1,h2,h3,#maintext li,table *{
+	font-family: 'Forum', serif;
+	color:#49274A;
+	font-size: 20px;
+}
+h1{ /* Шрифт заголовков */
+	padding: 20px 0px 10px 0px;
+	font-size: 32px;
+}
+h2{
+	font-size: 28px;
+}
+h3{
+	font-size: 26px;
+}
+#header h1{
+	font-family: 'Neucha', cursive;
+	font-size: 48px;
+	margin: 7px 0px 7px 0px;
+}
+.navbar{
+	background-color: #f4decb;
+	border-color: #f4decb;
+	border-radius: 10px;
+}
+.navbar-fixed-top{
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+.navbar-fixed-top li.active a,.navbar-fixed-top li>a:hover{
+	position: relative;
+	top:6px;
+}
+.navbar-fixed-top .nav-justified>li>a{
+	padding-top: 5px;
+	padding-bottom: 2px;
+}
+.nav-justified>li>a{
+	color: #49274A;
+}
+.nav-justified>li.active{
+	background-color: #f4decb;
+}
+.nav-justified>li.active a,.nav-justified>li>a:hover{
+	background-color: #f4decb;
+	color: #49274A;
+	transition: all 0.1s ease-in;
+	transform: scale(1.2);
+	border-radius: 40px;
+}
+#scrollToTop{
+	color:rgba(73,39,74,0.7);
+}
+.navbar a{
+	font-size: 20px;
+	font-family: 'Neucha', cursive;
+}
+#maintext, #maintext.article{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: #f8eee7;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#maintext.article{
+	background-color: white;
+}
+
+.footer{
+	background-color: #49274A;
+	color:#f8eee7;
+	
+}
+.footer *{
+	font-family: 'Forum', serif;
+	font-size: 18px;
+}
+#header{
+	background-color: rgba(148,97,142,0.8);
+}
+#header *{
+	color: #f8eee7;
+}
+
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	border-top: 1px solid #f4decb;
+}
+
+.comment { /* Блок с комментарием */
+  background: #94618E; 
+  color: #f8eee7 !important; 
+}
+
+.article .btn{
+	margin: 15px 0px 0px 15px;
+	background-color: #94618E;
+	border-color: #94618E;
+	color: #f8eee7 !important;
+}
+.article .btn:active{
+	background-color: #49274A;
+	border-color: #49274A;
+}
+
+
+.navbar-default .navbar-toggle{
+	background-color:  #94618E;
+	border-color: #94618E;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #f4decb;
+}
+.navbar-default .navbar-toggle:hover{
+	background-color:  #f4decb;
+	border-color: #94618E;
+}
+.navbar-default .navbar-toggle:hover .icon-bar{
+	background-color: #94618E;
+}
+
+
+
+
+
+

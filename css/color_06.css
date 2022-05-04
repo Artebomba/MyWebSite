@@ -1,0 +1,169 @@
+/* -------------------- Цветовая схема - 06 -------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC|Playfair+Display|Open+Sans');
+
+
+
+/* main colors */
+/* #67aeca */
+/* #675682 */
+/* #5f0f4e */
+/* #e52a6f */
+
+
+body{
+	font-family: 'Open Sans',sans-serif;
+	background: #fff;
+	background-image: url('../images/patterns/pinkblue.png');
+	
+	color: #5f0f4e;
+}
+
+body>.container-fluid>div{
+	background: #fff;
+}
+table *{
+	font-size: 18px;
+}
+.table tr{
+	color: #5f0f4e!important;
+}
+.table>tbody>tr>td{
+	border-top-color: rgba(103,174,202,0.2);
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color: rgba(103,174,202,0.1);
+}
+.table-hover>tbody>tr:hover{
+	background-color: rgba(103,174,202,0.1);
+}
+
+p, ul, ol, li, h1, h2, h3, strong, em, a{
+	color:#5f0f4e;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+}
+h1,.navbar a{
+	font-family: 'Playfair Display SC', serif;
+}
+h1{
+	font-size: 30px;
+	margin-top: 20px;
+}
+h2{
+	font-size: 22px;
+}
+h3{
+	font-size: 20px;
+}
+h1,h2,h3{
+	color:#5f0f4e;
+	font-family: 'Playfair Display', serif;
+}
+
+#header{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 30px;
+	background: rgba(255,255,255,0.9);
+}
+#header h2,#header h3,#header a{
+	font-weight: normal;
+	text-transform: none;
+	font-family: 'Open Sans', sans-serif;
+	color:#67aeca;
+}
+#header h2{
+	color: #e52a6f;
+	font-family: 'Playfair Display SC', serif;
+}
+#header h1{
+	font-size: 42px;
+	color: #e52a6f;
+	padding: 5px 0px 5px 0px;
+	margin: 5px 0px 5px 0px;
+	text-transform: none;
+}
+body>.container-fluid {
+	padding-right: 0;
+	padding-left: 0;
+}
+.navbar{
+	border:0;
+	background: #67aeca;
+	border-radius: 0;
+}
+
+
+
+#menu li a{
+	color: #fff;
+	transition:none;
+}
+#menu li.active a,#menu a:hover,#menu li.active,#menu li:hover{
+	background-color: #fff;
+	color: #e52a6f;
+	transition:none;
+}
+
+.navbar-fixed-top{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 768px){
+	body{
+		padding-top: 50px;
+	}
+	#header{
+		padding-top: 20px;
+	}
+	
+	#menu li.active,#menu li.active a{
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
+
+
+.footer,.footer a{
+	background-color: #675682;
+	color:white;	
+	font-size: 16px;
+}
+#langbox{
+	margin-right: 40px;
+}
+
+.comment, .comment strong{
+	background-color: #675682!important;
+	color:white!important;
+}
+
+#maintext, #maintext.article{
+	background-color: #fff;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#scrollToTop{
+	background: transparent;
+	color:rgba(103,86,130,0.8);
+}
+
+
+
+.navbar-default .navbar-toggle{
+	background-color:  #fff;
+	border-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #e52a6f;
+}
+.navbar-default .navbar-toggle:hover{
+	background-color:  #e52a6f;
+	border-color: #e52a6f;
+}
+.navbar-default .navbar-toggle:hover .icon-bar{
+	background-color: #fff;
+}

@@ -1,0 +1,350 @@
+﻿/* ------------- ОСНОВНЫЕ ТЕГИ ------------------------------------------------------------------------------ */
+
+body {  /* Тело документа */
+	background-image: url('../images/patterns/purple.png');
+	margin: 0;
+	padding: 0;
+}
+@media only screen and (min-width : 320px) and (max-width : 768px){
+    body{
+    	padding-top: 70px;
+    }
+}
+
+/* Разные кавычки для разных языков (тег <q>) */
+html:lang(en),
+html:lang(uk) { quotes: "\201C" "\201D"; }
+html:lang(ru) { quotes: "\00AB" "\00BB"; }
+/* ------------- ФОРМАТ ТЕКСТА ------------------------------------------------------------------------------ */
+
+/* -- ОСНОВНОЙ КОНТЕНТ -- */
+
+h1,h2,h3,a{ /* Шрифт заголовков */
+	font-family: Helvetica, Verdana, sans-serif;
+	color: #176685;
+}
+
+h1 { /* Заголовок страницы */
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 100%;
+  text-align: center;
+  padding: 0px;
+  margin: 20px 0;
+}
+
+h2 { /* Подзаголовок страницы (названия подразделов) */
+  font-weight: bold;
+  font-size: 23px;
+  text-align: left;
+  text-indent: 40px;
+  margin: 20px 10px 10px 0px;
+}
+
+h3 { /* Подзаголовок страницы (названия подподразделов) */
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  text-indent: 40px;
+  margin: 20px 10px 10px 0px;
+}
+
+a:hover { /* Курсор наведен на ссылку */
+	text-decoration: none;
+}
+
+a:visited { /* Посещенная ссылка */
+	text-decoration: none;
+}
+
+a{ /* Ссылка */
+	color: #176685;
+	text-decoration: underline;
+}
+
+p { /* Абзац */
+	text-indent: 40px;
+	font-size: 18px !important;
+	line-height: 150%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: justify;
+}
+
+/* -- ШАПКА -- */
+#header{
+	font-family: Helvetica, Verdana, sans-serif;
+	color: #176685;
+}
+
+#header h1 { /* ФИО в шапке*/
+  line-height: 90%;
+  padding: 0px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+#header h2 { /* Тема работы в шапке*/
+  line-height: 90%;
+  text-indent: 0px;
+  margin: 0px;
+  padding: 7px 0px 10px 0px;
+}
+
+#header h3, #header h3 a { /* Факультет, кафедра, преподаватель в шапке*/
+  font-size: 18px;
+  line-height: 120%;
+}
+#header h3{
+  text-indent: 0px;
+  margin: 0px;
+  padding: 5px 0px 10px 0pt;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 768px){
+	#header h1,h2,h3{
+		text-align: center;
+	}
+}
+/* Отступы для подзаголовков в библиотеке и ссылках */
+
+div.links h2, div.links h3{
+	margin-top: 30px;
+	margin-bottom: 25px;
+}
+
+/* -- ТАБЛИЦА РЕЗЮМЕ -- */
+
+#resume td:first-child{
+	text-align: right;
+}
+#resume td:last-child{
+	text-align: left;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* ------------- ОСНОВНЫЕ БЛОКИ ----------------------------------------------------------------------------- */
+
+#langbox { /* Блок флагов */
+	float: right;
+  	padding: 5px 0px 0px 5px;
+  	min-height: 33px;
+}
+
+#maintext{ /* Основной блок страницы */
+	padding-bottom: 20px;
+}
+#maintext.article{ /* Фон реферата и статей */
+	background-color: white;
+}
+
+#photomag img{ /* Блок фотографии */
+	margin: 20px 10px 10px 10px;
+}
+@media only screen and (min-width : 320px) and (max-width : 768px){
+	#photomag img{
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.comment { /* Блок с комментарием */
+  background: lightsteelblue;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin: 0px 20px;
+  padding: 10px;
+  text-indent: 0;
+}
+
+/* Списки */
+#maintext ol,#maintext ul{
+	font-size: 18px;
+}
+
+/* Содержание реферата */
+ol.content{
+	font-family: Helvetica, Verdana, sans-serif;
+}
+ol.content li:first-child{ counter-reset: item }
+ol.content li { display: block }
+ol.content li:not(.skip):before { content: counters(item, ".") ". "; counter-increment: item }
+
+/* Список ссылок */
+ol.links { list-style-type: none; }
+ol.links li:before
+{
+  counter-increment: mycounter;
+  content: counter(mycounter) ".\00A0\00A0";
+}
+ol.start { counter-reset: mycounter; }
+
+
+/* Кнопка прокрутки вверх */
+
+#scrollToTop{
+	font-size: 50px;
+	padding:10px;
+	text-align:center;
+	color: rgba(27,122,159,0.6);
+	text-decoration: none;
+	position:fixed;
+	bottom:50px;
+	left:40px;
+	display:none;
+}
+#scrollToTop:hover{
+	text-decoration:none;
+}
+
+/* Футер */
+.footer{
+	background-color: #1b7a9f;
+	color:#eee;
+	margin: 0px;
+	padding: 10px;
+}
+.footer a {
+	color:#eee;
+}
+
+/* Основное меню */
+.nav-justified>li{
+	vertical-align: middle;
+}
+.nav-justified>li>a{
+	color: #eee;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	-webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+.navbar-fixed-top .nav-justified>li>a{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.nav-justified>li.active{
+	background-color: #eee;
+}
+.nav-justified>li.active a, .nav>li>a:focus, .nav>li>a:hover {
+	color: #1b7a9f;
+	background-color: #eee;
+}
+.navbar-default{
+	background-color: #1b7a9f;
+}
+
+.navbar-default .navbar-toggle{
+	background-color:  #ddd;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #1b7a9f;
+}
+.navbar-default .navbar-toggle:hover{
+	background-color: #1b7a9f ;
+}
+.navbar-default .navbar-toggle:hover .icon-bar{
+	background-color: #ddd;
+}
+.navbar-fixed-top{
+	margin-right: 15px;
+	margin-left: 15px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	min-height: 25px;
+}
+.navbar-collapse{
+	padding-left: 0;
+	padding-right: 0;
+}
+.navbar-header a{
+	margin: 15px;
+	display: inline-block;
+}
+.navbar a{
+	text-decoration: none;
+	font-size: 16px;
+}
+
+/* Фотография */
+.img-photo, img{
+	border: none;
+}
+.img-photo img{
+	float: right;
+}
+.img-photo:focus {
+  outline: none;
+}
+
+.img { /* Блок с рисунком */
+  margin: 15px 0 30px 0;
+}
+.img img{
+	display: block;
+	max-width:90%;
+	margin: 0 auto;
+}
+.imgcaption { /* Подпись под рисунком */
+ font-style: italic;
+ margin: 10px 0px;
+ padding: 2px 15px 3px 15px;
+ text-align: center;
+ text-indent: 0;
+}
+/* Кнопка возврата в бибилотеку */
+.article .btn{
+	margin: 15px 0px 0px 15px;
+	background-color: #1b7a9f;
+	text-decoration: none;
+}
+/* Крупный рисунок в реферате или статье */
+.article .img.big img{
+	width:85%;
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+.glyphicon {
+    font-size: 50px;
+}
+.glyphicon.glyphicon-arrow-left {
+    font-size: 25px;
+}
+
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
