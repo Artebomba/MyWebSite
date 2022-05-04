@@ -1,1 +1,1 @@
-# MyWebSite
+# My personal bachelor's website. Welcome!
