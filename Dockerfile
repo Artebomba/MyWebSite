@@ -10,8 +10,8 @@ RUN apk --no-cache upgrade && apk add --no-cache apache2
 RUN mkdir -p /run/apache2
 
 # Copy an original application
-RUN rm -f /var/www/html/index.html
-COPY ./* /var/www/html/
+COPY ./ /var/www/html/
+RUN chmod 775  /var/www/html/*
 
 # Open port for httpd access
 EXPOSE 80
