@@ -11,7 +11,6 @@ RUN mkdir -p /run/apache2
 
 # Copy an original application
 COPY ./ /var/www/html/
-RUN chmod 775  /var/www/html/*
 
 # Open port for httpd access
 EXPOSE 80
