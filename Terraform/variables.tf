@@ -26,11 +26,6 @@ variable "name" {
   type = string
 }
 
-
-variable "network-interface-id" {
-  type = string
-}
-
 variable "device-index" {
   type = number
 }

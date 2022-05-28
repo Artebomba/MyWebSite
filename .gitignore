@@ -6,3 +6,4 @@
 *.iml
 out
 gen
+Terraform/terraform.tfvars
