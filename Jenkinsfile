@@ -48,5 +48,7 @@ pipeline{
                 sh("docker rmi -f ${imageName}:$SHORT_COMMIT || :")
             }
         }
+
+
     }
 }
