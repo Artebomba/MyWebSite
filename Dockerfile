@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.authors="Pasterskyi A. artypa85@gmail.com" \
 
 COPY ./web_app /usr/local/apache2/htdocs/
 
-HEALTHCHECK --interval=5m --timeout=10s --retries=3 --start_period=1m \
+HEALTHCHECK --interval=5m --timeout=30s --retries=3  \
   CMD curl -f http://localhost/ || exit 1
 
 ENTRYPOINT ["/usr/sbin/httpd"]
