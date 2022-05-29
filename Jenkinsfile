@@ -8,6 +8,10 @@ pipeline{
     }
     environment {
         imageName= "artebomba/webapp"
+        tfvars = credentials('Secret_terraform_file')
+    }
+    tools {
+       terraform 'Terraform'
     }
 
     stages{
@@ -49,6 +53,14 @@ pipeline{
             }
         }
 
-
+        stage('Deploy web application using Terraform and AWS') {
+            steps{
+                echo '=== Deploy web application using Terraform and AWS ==='
+                sh('mv tfvars ./Terraform')
+                sh('terraform  -chdir=./Terraform fmt')
+                sh('terraform -chdir=./Terraform init')
+                sh('terraform -chdir=./Terraform apply --auto-approve')
+            }
+        }
     }
 }
