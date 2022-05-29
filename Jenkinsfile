@@ -4,10 +4,13 @@ pipeline{
         label 'master'
     }
     triggers {
-        pollSCM "* * * * *"
+        pollSCM "H/2 * * * *"
     }
     environment {
         imageName= "artebomba/webapp"
+    }
+    tools {
+       terraform 'Terraform'
     }
 
     stages{
@@ -49,6 +52,16 @@ pipeline{
             }
         }
 
-
+        stage('Deploy web application using Terraform and AWS') {
+            withCredentials([file(credentialsId: 'Secret_terraform_file ', variable: 'terraform.tfvars')]) {
+                steps{
+                    echo '=== Deploy web application using Terraform and AWS ==='
+                    sh('mv terraform.tfvars ./Terraform')
+                    sh('terraform  -chdir=./Terraform fmt')
+                    sh('terraform -chdir=./Terraform init')
+                    sh('terraform -chdir=./Terraform apply --auto-approve')
+                }
+            }
+        }
     }
 }

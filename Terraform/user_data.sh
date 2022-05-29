@@ -20,6 +20,9 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 #Install Docker Engine
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -a -G docker ec2-user
 sudo docker container run -itd -p 80:80 artebomba/webapp:latest
 
 
