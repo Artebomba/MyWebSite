@@ -9,6 +9,7 @@ pipeline{
     environment {
         imageName= "artebomba/webapp"
     }
+
     tools {
        terraform 'Terraform'
     }
