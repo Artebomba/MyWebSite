@@ -2,12 +2,12 @@
 echo "Hello Application Server"
 
 #Add Docker repository
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install \
     ca-certificates \
     curl \
     gnupg \
-    lsb-release
+    lsb-release -y
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo \
@@ -18,11 +18,11 @@ echo \
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
 #Install Docker Engine
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get update -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 sudo systemctl start docker
 sudo systemctl enable docker
-sudo usermod -a -G docker ec2-user
+sudo usermod -a -G docker ubuntu
 sudo docker container run -itd -p 80:80 artebomba/webapp:latest
 
 

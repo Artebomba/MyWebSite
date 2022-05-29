@@ -22,7 +22,7 @@ pipeline{
             }
         }
 
-        stage('Build'){
+        stage('Build docker image'){
             steps{
                 script {
                     echo '=== Building Docker Image ==='
@@ -59,7 +59,6 @@ pipeline{
                     withCredentials([file(credentialsId: 'tfvars', variable: 'terraform')]) {
                          echo '=== Deploy web application using Terraform and AWS ==='
                          sh('mv ${terraform} ./Terraform')
-                         sh('terraform  -chdir=./Terraform fmt')
                          sh('terraform -chdir=./Terraform init')
                          sh('terraform -chdir=./Terraform apply --auto-approve')
                     }

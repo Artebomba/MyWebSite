@@ -89,3 +89,12 @@ resource "aws_network_interface" "simple-web-app" {
     aws_security_group.allow-web-traffic.id
   ]
 }
+
+resource "aws_eip" "simple-web-app" {
+  vpc = true
+  network_interface = aws_network_interface.simple-web-app.id
+  associate_with_private_ip = "10.0.1.50"
+  depends_on = [
+    aws_internet_gateway.simple-web-app
+  ]
+}
