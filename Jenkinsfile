@@ -8,6 +8,10 @@ pipeline{
     }
     environment {
         imageName= "artebomba/webapp"
+        tfvars = credentials('Secret_terraform_file')
+    }
+    tools {
+       terraform 'Terraform'
     }
     tools {
        terraform 'Terraform'
