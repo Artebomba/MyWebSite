@@ -26,7 +26,7 @@ spec:
         spec:
             containers:
               - name: webapp
-                image: $env
+                image: artebomba/webapp:latest
                 ports:
                   - containerPort: 80
             restartPolicy: Always
