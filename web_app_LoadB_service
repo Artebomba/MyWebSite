@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp_load_balancer
+spec:
+  selector:
+    matchLabels:
+      app: webapp
+      tier: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  clusterIP: $env
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: $env

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: webapp-deployment
+    labels:
+        app: webapp
+        tier: frontend
+        type: deployment
+spec:
+    replicas: 2
+    strategy:
+        type: RollingUpdate
+        rollingUpdate:
+            maxUnavailable: 1
+            maxSurge: 1
+    selector:
+        matchLabels:
+            app: webapp
+            tier: frontend
+    template:
+        metadata:
+            name: webapp
+            labels:
+                app: webapp
+                tier: frontend
+        spec:
+            containers:
+              - name: webapp
+                image: $env
+                ports:
+                  - containerPort: 80
+            restartPolicy: Always

@@ -2,10 +2,7 @@
 ### Example user template
 
 # IntelliJ project files
-.idea/
+.idea
 *.iml
 out
 gen
-Terraform/terraform.tfvars
-*.tfstate
-*.terraform

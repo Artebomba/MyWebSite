@@ -1,10 +1,13 @@
 FROM httpd:alpine
 
-LABEL "maintainer"="Pasterskyi A. artypa85@gmail.com"
+LABEL org.opencontainers.image.authors="Pasterskyi A. artypa85@gmail.com" \
+      "git"="https://github.com/Artebomba/MyWebSite.git"
 
-COPY . /usr/local/apache2/htdocs/
+COPY ./web_app /usr/local/apache2/htdocs/
 
-HEALTHCHECK --interval=5m --timeout=3s \
+HEALTHCHECK --interval=5m --timeout=30s --retries=3  \
   CMD curl -f http://localhost/ || exit 1
 
 EXPOSE 80
+
+CMD ["/usr/local/bin/httpd-foreground"]
