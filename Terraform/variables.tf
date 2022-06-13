@@ -1,15 +1,3 @@
-variable "aws-access-key" {
-  type = string
-  description = "My access key for Artem user"
-  sensitive = true
-}
-
-variable "aws-secret-key" {
-  type = string
-  description = "My secret key for Artem user"
-  sensitive = true
-}
-
 variable "aws-region" {
   default = "eu-central-1"
   type = string
@@ -37,7 +25,7 @@ variable "iam-instance-profile" {
 }
 
 variable "instance-type" {
-  default = 't2.micro'
+  default = "t2.micro"
   type = string
 }
 

@@ -10,6 +10,7 @@ pipeline{
         imageName= "artebomba/webapp"
         AWS_ACCESS_KEY_ID     = credentials('ARTEM_AWS_USER_SECRET_KEY')
         AWS_SECRET_ACCESS_KEY = credentials('ARTEM_AWS_USER_SECRET_ACCESS_KEY')
+        AWS_DEFAULT_REGION="eu-central-1"
     }
 
     options {
@@ -62,11 +63,13 @@ pipeline{
         stage('Deploy web application using Terraform and AWS') {
             steps{
                 echo '=== Deploy web application using Terraform and AWS ==='
+                sh('terraform -chdir=./Terraform init')
                 catchError {
                     sh('terraform -chdir=./Terraform destroy --auto-approve')
                 }
-                sh('terraform -chdir=./Terraform init')
                 sh('terraform -chdir=./Terraform apply --auto-approve')
+                sh('sleep 300')
+                sh('terraform -chdir=./Terraform destroy --auto-approve')
             }
         }
     }

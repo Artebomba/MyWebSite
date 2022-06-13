@@ -4,3 +4,4 @@ terraform {
     key    = "remote.tfstate"
     region = "eu-central-1"
   }
+}
