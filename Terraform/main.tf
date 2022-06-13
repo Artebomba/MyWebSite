@@ -7,9 +7,11 @@ resource "aws_instance" "webapp" {
     network_interface_id = aws_network_interface.simple-web-app.id
   }
 
-  user_data = templatefile("${path.module}/user_data.sh", {repository_url = var.repository-url})
+  user_data = templatefile("${path.module}/user_data.sh", {artem = "best"})
 
   tags = {
     Name = var.name
   }
+  provider = aws.aws-frankfurt
+  key_name = aws_key_pair.generated_key.key_name
 }

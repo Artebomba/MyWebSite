@@ -8,6 +8,12 @@ pipeline{
     }
     environment {
         imageName= "artebomba/webapp"
+        AWS_ACCESS_KEY_ID     = credentials('ARTEM_AWS_USER_SECRET_KEY')
+        AWS_SECRET_ACCESS_KEY = credentials('ARTEM_AWS_USER_SECRET_ACCESS_KEY')
+    }
+
+    options {
+        disableConcurrentBuilds()
     }
 
     tools {
@@ -55,14 +61,12 @@ pipeline{
 
         stage('Deploy web application using Terraform and AWS') {
             steps{
-                script {
-                    withCredentials([file(credentialsId: 'tfvars', variable: 'terraform')]) {
-                         echo '=== Deploy web application using Terraform and AWS ==='
-                         sh('mv ${terraform} ./Terraform')
-                         sh('terraform -chdir=./Terraform init')
-                         sh('terraform -chdir=./Terraform apply --auto-approve')
-                    }
+                echo '=== Deploy web application using Terraform and AWS ==='
+                catchError {
+                    sh('terraform -chdir=./Terraform destroy --auto-approve')
                 }
+                sh('terraform -chdir=./Terraform init')
+                sh('terraform -chdir=./Terraform apply --auto-approve')
             }
         }
     }
