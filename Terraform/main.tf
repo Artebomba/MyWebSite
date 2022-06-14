@@ -13,5 +13,6 @@ resource "aws_instance" "webapp" {
     Name = var.name
   }
   provider = aws.aws-frankfurt
-  key_name = aws_key_pair.generated_key.key_name
+  #key_name =aws_key_pair.generated_key.key_name
+  key_name = data.aws_key_pair.my_main_aws_key_pair.key_name
 }

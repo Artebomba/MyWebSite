@@ -97,21 +97,27 @@ resource "aws_eip" "simple-web-app" {
   depends_on = [
     aws_internet_gateway.simple-web-app
   ]
+  address = ""
 }
 
-resource "tls_private_key" "my_key" {
-  algorithm = "RSA"
-  rsa_bits  = 4096
-}
+#resource "tls_private_key" "my_key" {
+#  algorithm = "RSA"
+#  rsa_bits  = 4096
+#}
 
-resource "aws_key_pair" "generated_key" {
-  key_name   = var.generated_key_name[0]
-  public_key = tls_private_key.my_key.public_key_openssh
+#resource "aws_key_pair" "generated_key" {
+#  key_name   = var.generated_key_name[0]
+#  public_key = tls_private_key.my_key.public_key_openssh
+#
+#  provisioner "local-exec" {    # Generate "terraform-key-pair.pem" in current directory
+#    command = <<-EOT
+#      echo '${tls_private_key.my_key.private_key_pem}' > ./'${var.generated_key_name[0]}'.pem
+#      chmod 400 ./'${var.generated_key_name[0]}'.pem
+#    EOT
+#  }
+#}
 
-  provisioner "local-exec" {    # Generate "terraform-key-pair.pem" in current directory
-    command = <<-EOT
-      echo '${tls_private_key.my_key.private_key_pem}' > ./'${var.generated_key_name[0]}'.pem
-      chmod 400 ./'${var.generated_key_name[0]}'.pem
-    EOT
-  }
+data "aws_key_pair" "my_main_aws_key_pair" {
+  key_pair_id = "key-0cd9e7de9bcf2772d"
+  key_name = "artem-key-frankfurt"
 }
