@@ -5,12 +5,14 @@ variable "aws-region" {
   sensitive = true
 }
 variable "ami-id" {
-  default = "ami-015c25ad8763b2f11" # AMI for an Ubuntu Server for  region: eu-central-1
+  default = { "eu-central-1" = "ami-015c25ad8763b2f11",
+              "eu-west-1" = "ami-0d75513e7706cf2d9"
+  } # AMI for an Ubuntu Server
   validation {
     condition = substr(var.ami-id, 0, 4) == "ami-"
     error_message = "Put an appropriate ami id "
   }
-  type = string
+  type = map(string)
 }
 
 variable "generated_key_name" {
